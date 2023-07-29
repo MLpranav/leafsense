@@ -1,2 +1,17 @@
-# tomatoleaf
-Classification CNN to detect diseases in tomato plants using leaf images.
+Welcome.
+
+## Diagram and Dependencies
+
+- a
+
+## Frontend
+
+- a
+
+## Backend
+
+- a
+
+## Model
+
+- a
