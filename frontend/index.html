@@ -38,12 +38,12 @@
             <div id="mainHeader">
                 <div class="d-inline-flex align-items-center justify-content-center">
                     <img src="logo.png" alt="Logo" class="mx-auto d-block img-fluid" style="max-height: 15vh;"/>
-                    <h3 class="text-center my-2">Tomato Plant Disease<br>Prediction and Classification<br>by Leaf Image Analysis</h3>
+                    <h3 class="text-center my-2" v-html="langCues[selectedLanguage][6]"></h3>
                 </div>
 				<div class="text-center mx-3 py-2 h5 d-flex align-items-center justify-content-center" style="border-top: 1px solid; border-bottom: 1px solid;">
-					<a href="#" class="mx-2 link-danger" @click.prevent="reloadPage">Home</a>	
+					<a href="#" class="mx-2 link-danger" @click.prevent="reloadPage">{{ langCues[selectedLanguage][4] }}</a>	
                      | 	
-                    <a href="#" class="mx-2 link-danger" @click.prevent="showAbout">About</a>
+                    <a href="#" class="mx-2 link-danger" @click.prevent="showAbout">{{ langCues[selectedLanguage][5] }}</a>
 					 |
 					<select v-model="selectedLanguage" class="form-select mx-2 bg-danger text-light text-center" style="max-width:105px;">
 						<option value="English">English</option>
@@ -170,7 +170,7 @@
                             //link.click();
                             let formData = new FormData();
                             formData.append('image', blob);
-                            axios.post('https://tomato.sarthakgoelart.repl.co/predict_disease', formData)
+                            axios.post('', formData)
                                 .then(response => {
                                     if (Object.keys(response.data).length === 0) {
                                         this.error = "No match found.";
