@@ -170,7 +170,7 @@
                             //link.click();
                             let formData = new FormData();
                             formData.append('image', blob);
-                            axios.post('', formData)
+                            axios.post('https://tomato.sarthakgoelart.repl.co/predict_disease', formData)
                                 .then(response => {
                                     if (Object.keys(response.data).length === 0) {
                                         this.error = "No match found.";
